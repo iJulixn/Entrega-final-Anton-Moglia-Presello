@@ -1,0 +1,27 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>Perfil De: {{ user.username }}</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="{% if user.perfil.imagen %}{{ user.perfil.imagen.url }}{% else %}{% static 'default.jpg' %}{% endif %}" alt="Imagen de perfil" class="img-thumbnail mb-3" width="200" height="200">
+                </div>
+                <div class="col-md-8">
+                    <p><strong>Nombre:</strong> {{ user.first_name | default:"No ingresado" }}</p>
+                    <p><strong>Apellido:</strong> {{ user.last_name | default:"No ingresado" }}</p>
+                    <p><strong>Email:</strong> {{ user.email | default:"No ingresado" }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+  

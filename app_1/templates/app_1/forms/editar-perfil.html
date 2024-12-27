@@ -1,0 +1,32 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="{% static 'app_1/css/styles.css' %}">
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+        <div>
+            <h1 style="text-align: center;">Editar Perfil</h1>
+            <form method="post" enctype="multipart/form-data" action="{% url 'editar_perfil' %}">
+                {% csrf_token %}
+                {{ form_usuario.as_p }} 
+                {{ form_perfil.as_p }}
+                <div style="text-align: center;">
+                    <button class = "btn btn-secondary" type="submit">Guardar Cambios</button>
+                    <a href="{% url 'perfil' %}" class="btn btn-secondary">Volver a Perfil</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

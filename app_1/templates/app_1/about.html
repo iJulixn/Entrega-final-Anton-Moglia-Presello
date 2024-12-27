@@ -1,0 +1,107 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    
+
+    
+<!-- About-->
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Sobre Nosotros</h2>
+            <h3 class="section-subheading text-muted">Para amantes de los Videojuegos</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image" style="width: 300px; height: 200px; overflow: hidden; margin: auto;">
+                    <img class="img-fluid" src='{% static "app_1/assets/img/about/tilteado.jpg" %}' alt="..." style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <div class="timeline-panel">
+                    
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Nuestro Comienzo</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Con el equipo empezamos a jugar hace una decada, y siempre nos encontrabamos con el mismo problema: "Che, nos falta uno."</p></div>
+                </div>
+            </li>
+            <li class="timeline">
+                <div class="timeline-image" style="width: 300px; height: 200px; overflow: hidden; margin: auto;">
+                    <img class="img-fluid" src='{% static "app_1/assets/img/about/idea.jpg" %}' alt="..." style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Nuevo Proyecto</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Cansados de no poder solucionar la problematica de comunidades toxicas, malos emparejamientos y trolls en general; decidimos tomar cartas en el asunto y comenzar este proyecto.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image" style="width: 300px; height: 200px; overflow: hidden; margin: auto;">
+                    <img class="img-fluid" src='{% static "app_1/assets/img/about/campeones.jpg" %}' alt="..." style="width: 100%; height: 100%; object-fit: cover;" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">En busca del equipo perfecto</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">decidimos crear una comunidad donde podes armar un equipo basado en tus preferencias, rango y objetivos. Evitando que esas horas destinadas a la diversion, se conviertan en un mal rato.</p></div>
+                </div>
+            </li>
+            
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Se Parte
+                        <br />
+                        De Nuestra
+                        <br />
+                        Historia!
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+<section class="page-section bg-light" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-heading text-uppercase">Nuestro Equipo</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src='{% static "app_1/assets/img/team/yulia.jpg" %}' alt="..." />
+                    <h4>Julian Anton</h4>
+                    <p class="text-muted">Co-Creador</p>
+
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/julian.antonf/" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/juliian.anton/" target="_blank" aria-label="Perfil de instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src='{% static "app_1/assets/img/team/naico.jpg" %}' alt="..." />
+                    <h4>Nicolas Moglia</h4>
+                    <p class="text-muted">Co-Creador</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/nicolas.moglia.3/" target ="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/nico.moglia.3/"  target="_blank" aria-label="Perfil de Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src='{% static "app_1/assets/img/team/pecha.jpg" %}' alt="..." />
+                    <h4>Pablo Presello</h4>
+                    <p class="text-muted">Co-Creador</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/sobarelahuehu" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/pablopresello/" target="_blank"  aria-label="Perfil de instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Un sitio creado por Gamers, para Gamers.</p></div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="card w-50 shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Cambiar Contraseña</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form_contraseña.as_p }}
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary" type="submit">Cambiar Contraseña</button>
+                    <a href="{% url 'perfil' %}" class="btn btn-secondary ml-2">Volver a Perfil</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

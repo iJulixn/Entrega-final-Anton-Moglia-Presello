@@ -1,0 +1,51 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <!-- Detalles del equipo -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Detalles del Equipo</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Juego:</th>
+                                <td>{{ equipo.juego }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Región:</th>
+                                <td>{{ equipo.region }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Rango:</th>
+                                <td>{{ equipo.rango }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cupos Disponibles:</th>
+                                <td>{{ equipo.cant_jugadores }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Objetivo del equipo -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Objetivo del Equipo</h5>
+                    <p class="card-text text-justify" style="white-space: pre-line;">{{ equipo.objetivo }}</p>
+                </div>
+            </div>
+
+            <!-- Botón para volver -->
+            <div class="text-center mt-4">
+                <a href="{% url 'buscar_equipo' %}" class="btn btn-primary">Volver</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

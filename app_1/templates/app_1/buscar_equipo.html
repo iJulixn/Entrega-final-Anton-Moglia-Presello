@@ -1,0 +1,57 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos Disponibles</title>
+</head>
+<body>
+    <h2 class="text-center mt-2">Buscar equipo</h2>
+<!-- Formulario de búsqueda -->
+<div class="d-flex flex-column align-items-center mb-2">
+    <form action="{% url 'filtrar_equipo' %}" method="GET">
+        <input type="text" name="q" placeholder="Buscar..." required>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+    <div class="container">
+    <table class="table">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Juego</th>
+            <th scope="col">Region</th>
+            <th scope="col">Rango</th>
+            <th scope="col">Cupos</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for ve in equipo %}
+          <tr class="table-warning">
+            <td>{{ve.juego}}</td>
+            <td>{{ve.region}}</td>
+            <td>{{ve.rango}}</td>
+            <td>{{ve.cant_jugadores}}</td>
+            <td>
+              
+              {% if user.is_superuser %}
+              <a class = "btn btn-secondary" href =' {% url "eliminar_equipo" ve.id %}'> Eliminar </a>
+              <a class = "btn btn-primary" href =' {% url "editar_equipo" ve.id %}'> Editar </a>
+              {% endif %}
+              <a class = "btn btn-dark" href =' {% url "ver_mas_equipo" ve.id %}'> Ver Mas </a>
+            </td>
+            {% endfor %}
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
+
+{% endblock %}
+
+  

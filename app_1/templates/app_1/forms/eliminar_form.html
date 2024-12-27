@@ -1,0 +1,20 @@
+{% extends 'app_1/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form action = "" method="post">
+                {% csrf_token %}
+
+                <p> ¿Estas seguro que deseas eliminar el Equipo? </p>
+                
+                <button type="submit" class = "btn btn-primary">Eliminar Equipo</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
